@@ -30,9 +30,9 @@ galleryListEl.addEventListener('click', onImageClick);
 function onImageClick(event) {
   event.preventDefault();
 
-  if (event.target.NodeName !== 'IMG') {
-    return;
-  }
+   if (!event.target.classList.contains("gallery__image")) {
+     return;
+   }
 
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" width="800" height="600">
