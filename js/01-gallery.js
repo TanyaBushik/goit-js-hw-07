@@ -21,7 +21,9 @@ const imageItem = galleryItems
   )
   .join("");
 
-galleryListEl.insertAdjacentHTML("beforeend", imageItem);
+// galleryListEl.insertAdjacentHTML("beforeend", imageItem);
+
+galleryListEl.innerHTML = imageItem;
 
 galleryListEl.addEventListener('click', onImageClick); 
   
